@@ -1,14 +1,16 @@
 form {
   max-width: 600px;
-  margin: 0 auto;
-  text-align: center; /* Adiciona a propriedade text-align para centralizar o conteúdo */
+  text-align: center;
 }
 
-.button-container {
+.button-container,
+.container,
+.body,
+.form-container {
   text-align: center;
-  margin-top: 20px; /* Adicione um espaçamento superior conforme necessário */
 }
-label {
+
+.label {
   display: block;
   margin-bottom: 5px;
 }
@@ -24,7 +26,7 @@ label[for="promocoes"] {
   border-radius: 4px;
 }
 
-input[type="checkbox"]{
+input[type="checkbox"] {
   display: block;
   margin-top: 10px;
 }
@@ -36,6 +38,20 @@ button[type="button"] {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.checkbox-container input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.checkbox-container span {
+  margin: 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -54,6 +70,7 @@ button[type="button"] {
   input[type="tel"],
   input[type="email"],
   label[for="promocoes"],
+  label[for="resposta"],
   input[type="checkbox"] {
     width: 50%;
     margin-right: 2%;
@@ -68,49 +85,58 @@ button[type="button"] {
     width: 80%;
     margin: 5px;
   }
-}
 
-.checkbox-container {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
+  .checkbox-container {
+    display: inline-block;
+    position: relative;
+  }
 
-.checkbox-container input[type="checkbox"] {
-  margin-right: 10px;
-}
-
-.checkbox-container span {
-  margin: 0;
-}
-
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.button-container {
-  text-align: center;
-}
-
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.form-container {
-  text-align: center;
+  .checkbox-container span {
+    padding-top: 1%;
+    position: absolute;
+    top: 0;
+    left: 30%;
+  }
 }
 
 .result-list {
   list-style-type: none;
   padding: 0;
   cursor: pointer;
+  margin-top: 0;
 }
 
 .options-container {
   margin-top: 10px;
+}
+
+.result-list,
+li {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+li {
+  list-style-type: none;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.form-container {
+  max-width: 600px;
+  text-align: center;
+}
+
+form {
+  text-align: center;
 }

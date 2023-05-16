@@ -5,36 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <title>Formulário de Venda</title>
+    <title>Formulário de Cadastro</title>
 </head>
 <body>
     <form id="myForm">
         <h1>Formulário de Venda</h1>
+
         <label for="nome">Nome do cliente:</label>
-        <input type="text" id="nome" name="nome" required>
-      
+        <input type="text" id="nome" name="nome" oninput="buscarNome()" required >
+        <label for="resposta"><ul id="resultado-nome" class="result-list"></ul></label>
+        
+
         <label for="endereco">Endereço do cliente:</label>
-        <input type="text" id="endereco" name="endereco" required>
+        <input type="tel" id="endereco" name="endereco" oninput="buscarEndereco()" required>
+        <label for="resposta"><ul id="resultado-endereco" class="result-list"></ul></label>
       
         <label for="telefone">Telefone do cliente:</label>
-        <input type="tel" id="telefone" name="telefone" required>
+        <input type="text" id="telefone" name="telefone" oninput="buscarTelefone()" required>
+        <label for="resposta"><ul id="resultado-telefone" class="result-list"></ul></label>
       
         <label for="email">E-mail do cliente:</label>
-        <input type="email" id="email" name="email">
+        <input type="email" id="email" name="email" oninput="buscarEmail()">
+        <label for="resposta"><ul id="resultado-email" class="result-list"></ul></label>
+
         
+        <span>Autoriza receber promoções e novidades por: </span>
+
         <label class="checkbox-container">
           <input type="checkbox" id="option1" name="option1">
-          <span>Option 1</span>
+          <span>whatsapp</span>
         </label>
       
         <label class="checkbox-container">
           <input type="checkbox" id="option2" name="option2">
-          <span>Option 2</span>
+          <span style="margin: 0; padding: auto;">Email</span>
         </label>
       
         <label class="checkbox-container">
           <input type="checkbox" id="option3" name="option3">
-          <span>Option 3</span>
+          <span>Sms</span>
         </label>
       
         <div class="button-container">
@@ -45,3 +54,4 @@
     <script src="script/script.js"></script>
 </body>
 </html>
+
