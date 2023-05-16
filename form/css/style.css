@@ -64,9 +64,9 @@ button[type="button"] {
     width: auto;
   }
 
-  button[type="submit"] {
-    width: 100%;
-    margin-top: 20px;
+  button {
+    width: 80%;
+    margin: 5px;
   }
 }
 

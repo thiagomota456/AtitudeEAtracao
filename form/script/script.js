@@ -66,13 +66,16 @@ let ProdutosAdd = 0;
 
 function adicionarOpcoesProduto() {
   ProdutosAdd++;
+  let producctName = document.getElementById('produto').value;
   const divOpcoesMaca = document.createElement('div');
   divOpcoesMaca.id = 'opcoes-produtos-' + ProdutosAdd;
   divOpcoesMaca.className = 'options-container'
 
   const labelTipoMaca = document.createElement('label');
   labelTipoMaca.setAttribute('for', 'tipo-produto-' + ProdutosAdd);
-  labelTipoMaca.textContent = 'Tipo de produto:';
+  labelTipoMaca.setAttribute('id', 'label-tipo-produto-' + ProdutosAdd);
+  labelTipoMaca.set
+  labelTipoMaca.textContent = producctName;
 
   const selectTipoDeProduto = document.createElement('select');
   selectTipoDeProduto.id = 'tipo-produto-' + ProdutosAdd;
@@ -105,4 +108,13 @@ function adicionarOpcoesProduto() {
 
   const formContainer = document.querySelector('#moreProduct');
   formContainer.appendChild(divOpcoesMaca);
+}
+
+function enviar(){
+  
+  for(var i=1; i<ProdutosAdd; i++){
+    var Produto = document.getElementById("label-tipo-produto-"+i).innerHTML
+    var tamanho = document.getElementById("tipo-produto-"+i).value;
+    var quantidade = document.getElementById("quantidade-produto-"+i).value;
+  }
 }
