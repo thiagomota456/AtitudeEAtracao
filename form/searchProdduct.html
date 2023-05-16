@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Formulário de Produtos</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script type="text/javascript" src="javascript.js"></script>
+</head>
+<body onload="adicionarFirtsOpcoes()">
+  <div class="form-container">
+    <h1>Formulário de Produtos</h1>
+    <form>
+      <label for="produto">Produto:</label>
+      <input type="text" id="produto" name="produto" oninput="buscarProdutos()">
+    </form>
+    <ul id="resultado" class="result-list"></ul>
+
+    <div id="moreProduct">
+
+    </div>
+    
+    <button onclick="adicionarOpcoesProduto()">Adicionar mais uma opção de maçã</button>
+  </div>
+
+  <script src="script.js"></script>
+
+  <script></script>
+</body>
+</html>

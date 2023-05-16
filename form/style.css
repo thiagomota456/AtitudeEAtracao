@@ -24,13 +24,12 @@ label[for="promocoes"] {
   border-radius: 4px;
 }
 
-input[type="checkbox"],
-button[type="submit"] {
+input[type="checkbox"]{
   display: block;
   margin-top: 10px;
 }
 
-button[type="submit"] {
+button[type="button"] {
   padding: 10px 15px;
   background-color: #007bff;
   color: #fff;
@@ -54,7 +53,8 @@ button[type="submit"] {
   input[type="text"],
   input[type="tel"],
   input[type="email"],
-  label[for="promocoes"] {
+  label[for="promocoes"],
+  input[type="checkbox"] {
     width: 50%;
     margin-right: 2%;
     margin-bottom: 20px;
@@ -64,7 +64,6 @@ button[type="submit"] {
     width: auto;
   }
 
-  input[type="checkbox"],
   button[type="submit"] {
     width: 100%;
     margin-top: 20px;
@@ -85,11 +84,6 @@ button[type="submit"] {
   margin: 0;
 }
 
-label:hover {
-  background: #eee;
-  cursor: pointer;
-}
-
 .container {
   display: flex;
   justify-content: center;
@@ -100,4 +94,23 @@ label:hover {
   text-align: center;
 }
 
-/* Restante do código CSS... */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form-container {
+  text-align: center;
+}
+
+.result-list {
+  list-style-type: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.options-container {
+  margin-top: 10px;
+}

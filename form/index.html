@@ -5,18 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Document</title>
+    <title>Formulário de Venda</title>
 </head>
 <body>
-    <form>
-        <h1>Fomulario de venda:</h1>
+    <form id="myForm">
+        <h1>Formulário de Venda</h1>
         <label for="nome">Nome do cliente:</label>
         <input type="text" id="nome" name="nome" required>
       
         <label for="endereco">Endereço do cliente:</label>
         <input type="text" id="endereco" name="endereco" required>
       
-        <label for="telefone">Telefone do clinte:</label>
+        <label for="telefone">Telefone do cliente:</label>
         <input type="tel" id="telefone" name="telefone" required>
       
         <label for="email">E-mail do cliente:</label>
@@ -37,14 +37,11 @@
           <span>Option 3</span>
         </label>
       
-        <div class="container">
-            <form>
-              <div class="button-container">
-                <button type="submit">Registrar</button>
-              </div>
-            </form>
-          </div>
-          
+        <div class="button-container">
+          <button type="button" onclick="saveFormData()">Registrar</button>
+        </div>
       </form>
+
+    <script src="script.js"></script>
 </body>
 </html>
